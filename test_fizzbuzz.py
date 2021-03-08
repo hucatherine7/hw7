@@ -4,8 +4,12 @@
 #Should fail first time
 
 import unittest
-from fizzBuzz import fizzBuzz
+import fizzbuzz
 
-class TestFizzBuzz(unittest.Testcase):
-    def test_fizzBuzz(self):
-        self.assert(fizzBuzz(3), 'Fizz')
+class TestFizzbuzz(unittest.TestCase):
+    def test_fizzbuzz(self):
+        self.assertEqual(fizzbuzz.fizzbuzz(3), 'Fizz')
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
